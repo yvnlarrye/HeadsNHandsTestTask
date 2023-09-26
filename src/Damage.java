@@ -8,7 +8,7 @@ public class Damage {
     }
 
     public int getRandomDamage() {
-        return (int) Math.floor(m + Math.random() * (Math.abs(m - n) + 1));
+        return Randomizer.getRandIntInRange(m, n);
     }
 
     public static void main(String[] args) {
