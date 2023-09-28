@@ -1,3 +1,5 @@
+package utils;
+
 public class Randomizer {
     private Randomizer(){}
     public static int getRandIntInRange(int m, int n) {
