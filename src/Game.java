@@ -32,6 +32,38 @@ public class Game {
 
     public static void main(String[] args) {
         Game game = new Game();
+
+        //checking incorrect attack input reaction
+        try {
+            game.createPlayer(20, 0, 3, 1, 6);
+        } catch (Exception e) {
+            System.out.println("Error occurred while creating creature\n" + e.getMessage());
+        }
+
+        //checking incorrect defense input checking
+        try {
+            game.createPlayer(20, 5, 31, 1, 6);
+        } catch (Exception e) {
+            System.out.println("Error occurred while creating creature\n" + e.getMessage());
+        }
+
+        //checking incorrect health input reaction
+        try {
+            game.createPlayer(-3, 5, 3, 1, 6);
+        } catch (Exception e) {
+            System.out.println("Error occurred while creating creature\n" + e.getMessage());
+        }
+
+        //checking incorrect attack input reaction
+        try {
+            game.createPlayer(20, 5, 3, -6, 0);
+        } catch (Exception e) {
+            System.out.println("Error occurred while creating creature\n" + e.getMessage());
+        }
+
+        System.out.println();
+
+
         Player player = game.createPlayer(20, 5, 3, 1, 6);
         System.out.println(player);
         Monster monster = game.createMonster(50, 3, 2, 1, 10);
